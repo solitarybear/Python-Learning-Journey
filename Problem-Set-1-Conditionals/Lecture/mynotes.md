@@ -52,7 +52,7 @@ First Line: The first line of a Python script cannot be indented.
 Trigger: A colon (:) at the end of a statement (like if, for, or def) always indicates that the next line must start a new indented block. ￼
 
 # and keyword
-we introduce one other keyword here in Python, to see exactly how we might combine additional thoughts. And that's going to be literally the word and, a conjunction of one, or two, or more questions that we might want to ask at once.
+we introduce one other keyword here in Python, to see exactly how we might combine additional thoughts. And that's going to be literally the word 'and', a conjunction of one, or two, or more questions that we might want to ask at once.
 
 # parity 
 Odd or Even: In math, parity is the property of an integer being either odd or even.

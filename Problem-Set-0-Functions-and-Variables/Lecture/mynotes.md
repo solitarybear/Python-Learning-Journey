@@ -31,6 +31,20 @@ sep short for separator
 this end means whole thing (when we use print something) is ended by a new line
 
 
+> Nice thing to know 
+To sum it up perfectly:
+Leaving it out entirely is exactly the same as writing end=None.
+Both of those options trigger Python's default setting, which is end="\n".
+Therefore, these three lines of code do the exact same thing under the hood:
+
+'''python
+print("namaste")
+print("namaste", end=None)
+print("namaste", end="\n")
+'''
+
+All three will print "namaste" and then move the cursor to a new line.
+
 # Parameters 
 when we have been passing values to print those are called positional parameters -- positional in the sense that first thing you pass print first , the second thing you pass to print after comma get printed second so forth 
 
@@ -93,6 +107,56 @@ total = 10 + 20 + 30 + \
 Use code with caution.
 
 Pro Tip: Python experts usually prefer using parentheses () instead of backslashes for this, as it is considered "cleaner" and less prone to errors if you accidentally hit a space after the backslash
+
+## the '\' and '{}' inside a f-string 
+Inside the curly braces {} of an f-string, Python treats a backslash as regular Python code logic (in Python 3.12+) rather than part of the text string.
+When you want to turn a "special character" back into a normal, simple letter, here is the complete list of special programming characters in Python that you can neutralize using a backslash \
+### 1. The Quote Marks (\" and \')
+Quotes are special because they tell Python where a string starts and ends. A backslash strips their power so you can print them.
+
+* \" $\rightarrow$ Prints a literal double quote "
+* \' $\rightarrow$ Prints a literal single quote '
+
+### 2. The Backslash Itself (\\)
+Because the backslash is the "escape command," it is a special character. To print a normal backslash, you must escape it with another backslash.
+
+* \\ $\rightarrow$ Prints a literal single backslash \
+
+### 3. The Brackets in F-Strings (\{\})*
+Normally, inside an f-string, curly braces {} are special because they look for variables. If you want to print actual, literal curly braces on the screen inside an f-string, you do not use a backslash. Instead, you double them up:
+
+* {{ $\rightarrow$ Prints a literal {
+* }} $\rightarrow$ Prints a literal }
+
+### 4. Triple Brackets {{{variable}}} $\rightarrow$ The Combo
+
+* What it does: This is a combination of the first two rules!
+* The outer two brackets {{ and }} tell Python: "Print literal brackets on the screen."
+   * The innermost single bracket { } tells Python: "Evaluate the variable inside."
+* Result: It prints physical brackets on the monitor, but puts the actual value of your variable inside them.
+* Code:
+
+print(f"Namaste, {{{last}}}")
+
+* Output: Namaste, {Kumar}
+
+
+## bidirectional toggle switch 
+Yes, that is exactly what the backslash does. It acts as a bidirectional toggle switch that reverses the normal meaning of the character directly following it. [1, 2] 
+### How the Backslash Toggles Meaning
+
+* Makes standard characters special:
+Placing a backslash before an ordinary letter gives it a powerful new function.
+* n is just a letter $\rightarrow$ \n becomes a newline.
+   * t is just a letter $\rightarrow$ \t becomes a horizontal tab.
+   * r is just a letter $\rightarrow$ \r becomes a carriage return. [3, 4, 5, 6] 
+* Makes special characters standard (unspecial):
+Placing a backslash before a character that already has a functional meaning strips that power away, turning it into plain text.
+* ' delimits strings $\rightarrow$ \' becomes a literal, viewable quote mark inside a string.
+   * " delimits strings $\rightarrow$ \" becomes a literal quote mark.
+   * \ escapes things $\rightarrow$ \\ escapes itself to print a single, literal backslash. [7, 8] 
+
+
 
 # str
 strings themselvess comes with the lot of build in functionality 
@@ -194,7 +258,7 @@ A float is a number with a decimal point, properly called a floating point value
 round(number [, ndigits])
 
 >sytax in docs.python.org 
-round (number , ndigits = none)
+round (number , ndigits = None)
 
 
 * notice Notice this time there's no star, there's no star objects like there was for print. The Round function takes just one number as its first argument, period.

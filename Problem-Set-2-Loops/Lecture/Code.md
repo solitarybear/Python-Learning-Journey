@@ -1,4 +1,4 @@
-# 1 what cat told me once 
+# 1 what cat told me once  
 >cat.py 
 
 print("meow")

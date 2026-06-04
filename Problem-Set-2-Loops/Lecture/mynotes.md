@@ -1,4 +1,4 @@
-# Question about FOR loops that we use in C++ and other languages 
+# Question about FOR loops that we use in C++ and other languages  
 AUDIENCE: Can we use stuff like for loops which have a certain i-value initialized to it at the start and it runs from the particular condition you put into the thing and increment it as you go along? 
 DAVID MALAN: Short answer, no, you cannot do what you're describing, but there is another type of for loop that we will soon see
 

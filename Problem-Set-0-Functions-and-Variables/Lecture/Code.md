@@ -112,7 +112,7 @@ print ("Namaste," , name )
 
 
 # One of the best thing you can do is going through documentation 
->print(*objects, sep=' ' , end="\n" , file = none , flash= "False" )
+>print(*objects, sep=' ' , end="\n" , file = None , flash= "False" )
 
 >hello.py
 #Ask user for their name 
