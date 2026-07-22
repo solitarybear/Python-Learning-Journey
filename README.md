@@ -11,7 +11,7 @@ Documenting my progress from basics to mastery.
 - [ ] Problem Set 1: Conditionals
 - [ ] Problem Set 2: Loops
 - [ ] Problem Set 3: Exceptions
-- [ ] Problem Set 4: Libraries 
+- [.] Problem Set 4: Libraries 
 - [ ] Problem Set 5: Unit Tests
 - [ ] Problem Set 6: File I/O
 - [ ] Problem Set 7: Regular Expressions
